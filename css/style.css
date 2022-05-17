@@ -42,6 +42,11 @@ footer {
   padding-right: 15px;
 }
 
+.container h1{
+  padding-bottom: 30px;
+}
+
+
 /* Header styles */
 
 header {
@@ -122,9 +127,10 @@ nav {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+
 }
 
-.nav-item a:hover::after {
+.nav-item a::after {
   content: "";
   bottom: -1px;
   left: 0;
@@ -133,6 +139,13 @@ nav {
   background-color: var(--accent-color);
   border-radius: 2px;
   position: absolute;
+  opacity: 0;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item a:hover::after {
+  opacity: 1;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -182,6 +195,8 @@ nav {
 
 .contacts-link:focus .contacts-icon {
   fill: var(--accent-color);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero styles */
@@ -296,8 +311,8 @@ nav {
   line-height: 1.87;
   letter-spacing: 0.06em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Features styles */
@@ -353,10 +368,12 @@ nav {
 .our-member-links .link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:focus .our-member-links-icon {
   fill: var(--address-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-member-links li + li {
@@ -367,6 +384,11 @@ nav {
   background-color: var(--accent-color);
   border-radius: 50%;
 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.our-member-links li{
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -383,12 +405,13 @@ nav {
 
 .link:focus .our-clients-links-icon {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-item-icon {
   text-align: center;
   margin-bottom: 30px;
-  background-color: var(--logo-down-color);
+  background-color: var(--secondary-bg-color)
 }
 
 .feature-item {
@@ -478,6 +501,7 @@ nav {
 
 .member-data {
   padding: 30px 0px 30px;
+  background-color: var(--address-color);
 }
 
 .our-team-member h3 {
@@ -628,10 +652,13 @@ footer .container {
 .our-social-links .link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:focus .our-links-icon {
   fill: var(--address-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .join-us {
@@ -761,6 +788,8 @@ footer .container {
 .gallery-card-thumb:hover .gallery-card-info,
 .gallery-card-thumb:focus .gallery-card-info {
   transform: translateY(0);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-card-info-text {
@@ -771,3 +800,4 @@ footer .container {
 
   color: var(--primary-bg-color);
 }
+
